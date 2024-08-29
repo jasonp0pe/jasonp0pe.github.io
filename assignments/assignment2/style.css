@@ -1,39 +1,59 @@
 body {
-    background: url("images/hawaii.jpg");
+    background-image: url('hawaii.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    color: #2c3e50; /* Dark blue-gray for the text */
+    margin: 0;
+    padding: 0;
 }
 
-#content {
-    width: 70%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+/* Style for the main content div */
+#main-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    padding: 40px;
+    max-width: 800px;
+    margin: 100px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+    text-align: center;
 }
 
-a {
-    color: #FF6347;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-#assignment1 {
-    color: #8A2BE2; /* Color for Assignment 1 link */
-}
-
-#assignment2 {
-    color: #4682B4; /* Color for Assignment 2 link */
-}
-
+/* Style for the header */
 h1 {
-    color: #2E8B57;
+    font-size: 36px;
+    color: #e74c3c; /* Red color for the header */
+    margin-bottom: 20px;
 }
 
+/* Style for the paragraph */
 p {
-    color: #696969;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Style for the assignment links */
+#assignment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#assignment-list li {
+    margin: 10px 0;
+}
+
+#assignment-list li a {
+    text-decoration: none; /* Remove underline */
+    font-size: 20px;
+    color: #2980b9; /* Blue color for links */
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#assignment-list li a:hover {
+    background-color: #3498db; /* Darker blue on hover */
+    color: #fff; /* White text on hover */
 }
