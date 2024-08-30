@@ -1,5 +1,5 @@
 body {
-    background-image: url('hawaii.jpg'); /* Replace with your background image */
+    background-image: url('hawaii.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,21 +9,48 @@ body {
     padding: 0;
 }
 
-/* Style for the main content div */
-#main-content {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-    padding: 40px;
-    max-width: 800px;
-    margin: 100px auto;
+/* Style for the content box */
+#content-box {
+    background-color: rgba(232, 239, 233, 0.8); /* Slightly transparent white */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(244, 244, 244, 0.5); /* Add some shadow for depth */
+}
+
+/* Ensure both images are the same size */
+img {
+    width: 100%;
+    max-width: 400px; /* Adjust size to your preference */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Adjusting h1, h2, and p styles within the content box */
+#content-box h1, #content-box h2, #content-box p {
+    color: #ea5013; /* Dark blue-gray for the text */
+}
+
+/* Ensure the text is centered */
+#content-box h1, #content-box h2 {
     text-align: center;
+}
+
+#content-box p {
+    text-align: justify;
+}
+
+/* Adjust padding and spacing within the content box */
+#content-box p {
+    margin-bottom: 20px;
 }
 
 /* Style for the header */
 h1 {
     font-size: 36px;
-    color: #e74c3c; /* Red color for the header */
+    color: #497ca8; /* Red color for the header */
     margin-bottom: 20px;
 }
 
@@ -47,13 +74,42 @@ p {
     text-decoration: none; /* Remove underline */
     font-size: 20px;
     color: #2980b9; /* Blue color for links */
-    background-color: #ecf0f1; /* Light gray background */
+    background-color: #ecf0f1; 
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
 }
 
 #assignment-list li a:hover {
-    background-color: #3498db; /* Darker blue on hover */
+    background-color: #3498db; 
     color: #fff; /* White text on hover */
+}
+
+/* Style for the table */
+table {
+    width: 100%; /* Make the table take up the full width of its container */
+    border-collapse: collapse; /* Collapse borders into a single border */
+    margin-bottom: 30px; /* Add some space below the table */
+    background-color: #f2f2f2; 
+}
+
+/* Style for the table headers */
+table th {
+    padding: 15px; /* Add padding inside table headers */
+    background-color: #3088bf; /* Dark blue-gray background for headers */
+    color: rgb(213, 85, 39); 
+    border: 1px solid #968a8a; /* Light gray border */
+}
+
+/* Style for the table cells */
+table td {
+    padding: 15px; /* Add padding inside table cells */
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: center; /* Center-align text in table cells */
+    background-color: #ffffff; /* White background for table cells */
+}
+
+/* Add hover effect for table rows */
+table tr:hover {
+    background-color: #ddd; /* Light gray background when hovering over rows */
 }

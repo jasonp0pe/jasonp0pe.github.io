@@ -1,0 +1,50 @@
+/* Set the default font for the page */
+body {
+    font-family: 'Arial', sans-serif; /* You can choose another font like 'Verdana', 'Helvetica', or import a Google Font */
+    background-color: #6bf50f; /* Light background color for readability */
+    color: #f1962d; 
+}
+
+/* Style the header and subheader */
+h1, h2 {
+    color: #58c1f9; 
+}
+
+/* Style the links */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #f56207; /* A blue color that's not the default */
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Add a formatted div for easy viewing of content */
+#content {
+    background-color: #060606; /* White background for the content */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a clean look */
+    max-width: 800px;
+}
+
+/* Assignments list styling */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Style specific IDs for custom colors */
+#assignment1 a {
+    color: #e91809; /* A red color for Assignment 1 */
+}
+
+#assignment2 a {
+    color: #34a853; /* A green color for Assignment 2 */
+}
