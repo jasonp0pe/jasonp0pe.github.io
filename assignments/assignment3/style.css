@@ -34,9 +34,9 @@ nav ul li {
 nav ul li a {
     color: #000000;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 20px;
     display: block;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
