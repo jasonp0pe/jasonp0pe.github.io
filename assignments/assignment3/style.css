@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eaeec7;
+}
+
+header {
+    background-color: #eaeec7;    ;
+    color: #621f1f;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #a5adb3;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #b7b2b2;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #621f1f;
+}
+
+.left-content {
+    flex: 3;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-box {
+    background-color: #621f1f;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px);
+    text-align: center;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #a5adb3;
+    padding: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.sidebar h2, .sidebar ul {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.big-ideas {
+    background-color: #eaeec7;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.idea {
+    display: flex;
+    align-items: center;
+    background-color: #eaeec7;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.idea img {
+    margin-right: 20px;
+}
+
+footer {
+    background-color: #621f1f;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box, .idea {
+        flex: 1 1 100%;
+    }
+
+    .content-box img, .idea img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .big-ideas {
+        padding: 10px;
+    }
+}
