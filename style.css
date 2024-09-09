@@ -21,8 +21,8 @@ h1 {
     color: #83d87b;
 }
 
-.assignments-section {
-    max-width: 1200px;
+.assignments-section, .projects-section {
+    max-width: 1600px;
     margin: 0 auto;
     text-align: center;
 }
@@ -33,13 +33,13 @@ h2 {
     color: #83d87b;
 }
 
-.assignments-container {
+.assignments-container, .projects-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.assignment-card {
+.assignment-card, .project-card {
     background-color: #83d87b;
     padding: 20px;
     border: 1px solid #000000;
@@ -48,32 +48,36 @@ h2 {
     text-align: center;
 }
 
-.assignment-card img {
+.assignment-card img, .project-card img, .project-card iframe {
     width: 300px;
     height: 150px;
     margin-bottom: 15px;
     border: 1px solid #83d87b;
 }
 
-.assignment-card h3 {
+.assignment-card h3, .project-card h3 {
     margin-bottom: 15px;
     font-size: 1.4em;
     color: #000000;
 }
 
-.assignment-card p {
+.assignment-card p, .project-card p {
     font-size: 1em;
     color: #000000;
 }
 
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
 
-
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .assignments-container {
+    .assignments-container, .projects-container {
         flex-direction: column;
     }
 
-    .assignment-card {
+    .assignment-card, .project-card {
         flex: 1 1 100%;
         margin-bottom: 20px;
     }

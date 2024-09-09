@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000; 
+    color: white;
+}
+
+.top-header .logo img {
+    height: 50px;
+}
+
+.top-header .gateways a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+.top-header .gateways a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+nav {
+    background-color: #691013; 
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; /* Adjust spacing */ 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+
+/* Section 1: Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: #C8102E;
+    margin-bottom: 20px;
+    height: 400px;
+    overflow: hidden; 
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 100%; 
+    object-fit: cover; /* Ensures the image scales properly without stretching */
+}
+
+.hero-box {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    background-color: #7C1418; 
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+}
+
+.hero-box h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Description Section */
+.description {
+    width: 60%; /* Set a more compact width */
+    margin: 30px auto; 
+    color: #4D4D4D; 
+    padding: 20px;
+}
+
+/* Heading styling */
+.description h2 {
+    font-size: 1.3rem; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000; 
+}
+
+/* Paragraph styling */
+.description p {
+    font-size: 1rem; 
+    line-height: 1.5; 
+}
+
+
+/* Section 2: Degree Programs */
+.degree-programs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C1418; 
+    padding: 50px 0;
+}
+
+.degree-programs-content {
+    display: flex;
+    max-width: 1200px; /* Adjust based on screen size */
+    width: 100%;
+    padding: 20px;
+}
+
+.degree-image img {
+    width: 100%; 
+    height: auto;
+}
+
+.degree-text {
+    width: 50%;
+    color: white;
+    padding-left: 20px; /* Space between the image and the text */
+}
+
+.degree-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.degree-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-apply-black {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Section 3: Educational Investment */
+.educational-investment {
+    background-color: #f5f5f5; 
+    padding: 50px 0;
+    text-align: center; /* Center-aligns all content */
+}
+
+.investment-content {
+    max-width: 800px; /* Width of the content box */
+    margin: 0 auto; 
+    color: #4D4D4D; 
+}
+
+.educational-investment h2 {
+    font-size: 2.5rem;
+    color: #7C1418; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.educational-investment p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-tuition {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #7C1418; 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+/* Section 4: Paying for School */
+.paying-for-school {
+    background-color: #fff; 
+    padding: 50px 0;
+    text-align: center; /* Center the text */
+}
+
+.school-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.paying-for-school h2 {
+    font-size: 2.5rem;
+    color: #7C1418; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.paying-for-school p {
+    font-size: 1.2rem;
+    color: #4D4D4D;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.funding-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.funding-option {
+    text-align: left; 
+    width: 23%; 
+}
+
+.funding-option img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.funding-option h3 {
+    font-size: 1.2rem;
+    color: #7C1418; 
+    margin-bottom: 10px;
+}
+
+.funding-option p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4D4D4D;
+}
+/* Section 5: Take the Next Step */
+.take-next-step {
+    background-color: #000; 
+    color: white;
+    padding: 50px 0;
+}
+
+.next-step-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.next-step-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.next-step-text {
+    width: 50%;
+}
+
+.next-step-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.next-step-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-apply-maroon {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6e1010;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #7C1418; 
+    color: white;
+    padding: 1px 0; 
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-columns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 30px; 
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h4 {
+    font-size: 1rem; 
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px; /* Reduced spacing between items */
+    font-size: 0.85rem; /* Reduced font size for list items */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+}
+
+.social-icons a {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 25px; /* Reduced size of social icons */
+    height: 25px;
+}
