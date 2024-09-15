@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Assignment 7</h1>
+    <h2>Introduction to JavaScript</h2>
+
+    <div class="container">
+        <!-- Column 1: Click Counter -->
+        <div class="column" id="click-counter" onclick="incrementCount()">
+            <p>Count</p>
+            <p id="count">0</p>
+        </div>
+
+        <!-- Column 2: Random Image -->
+        <div class="column" id="random-image">
+            <p>Random Image</p>
+            <img src="https://picsum.photos/200" alt="Random Image" onclick="refreshPage()">
+        </div>
+
+        <!-- Column 3: Slider Move -->
+        <div class="column" id="slider-move">
+            <p>Slider Move</p>
+            <input type="range" min="0" max="100" value="0" id="slider" oninput="moveSquare()">
+            <div id="square">200 x 200</div>
+        </div>
+    </div>
+
+    <script>
+        // Click counter functionality
+        let count = 0;
+        function incrementCount() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        // Refresh the page when the image is clicked
+        function refreshPage() {
+            location.reload();
+        }
+
+        // Slider functionality to move the square
+        function moveSquare() {
+            let sliderValue = document.getElementById("slider").value;
+            let square = document.getElementById("square");
+            square.style.left = sliderValue + '%';
+        }
+    </script>
+
+</body>
+</html>
