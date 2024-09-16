@@ -1,0 +1,170 @@
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f5f5f5;
+    --text-color: #333;
+    --highlight-color: #444;
+    --link-color: #380606;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--highlight-color);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+}
+
+.overview img {
+    width: 1200px;
+    height: 275px;
+    margin-bottom: 20px;
+}
+
+.pieces-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.pieces-list a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 5px;
+    color: var(--highlight-color);
+    transition: background-color 0.3s;
+}
+
+.pieces-list a:hover {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.chess-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--highlight-color);
+}
+
+.learn-more {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.learn-more:hover {
+    color: var(--highlight-color);
+}
+
+.chess-piece-info {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--highlight-color);
+    margin-top: 40px;
+}
+
+.chess-piece-info h2 {
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+.chess-piece-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.piece-link {
+    margin: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.piece-link:hover .piece-name {
+    color: var(--highlight-color);
+}
+
+.piece-link img {
+    width: 50px;
+    height: 50px;
+}
+
+.piece-name {
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .pieces-list {
+        flex-direction: column;
+    }
+
+    .chess-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .chess-piece-links {
+        flex-direction: column;
+    }
+}
