@@ -108,59 +108,154 @@ h1 {
     color: var(--highlight-color);
 }
 
-.chess-piece-info {
+.additional-pages {
     text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid var(--highlight-color);
+    padding: 40px 0;
+    background-color: var(--secondary-bg);
     margin-top: 40px;
 }
 
-.chess-piece-info h2 {
-    font-size: 1.5rem;
+.additional-pages h2 {
     color: var(--highlight-color);
     margin-bottom: 20px;
 }
 
-.chess-piece-links {
+.extra-links {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.piece-link {
-    margin: 10px;
+.extra-link {
     text-decoration: none;
-    color: var(--text-color);
-    text-align: center;
-    transition: color 0.3s ease;
+    padding: 15px 30px;
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.piece-link:hover .piece-name {
-    color: var(--highlight-color);
+.extra-link:hover {
+    background-color: var(--link-color);
 }
 
-.piece-link img {
-    width: 50px;
-    height: 50px;
-}
-
-.piece-name {
-    margin-top: 5px;
-    font-size: 1rem;
-}
 .chessboard-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
-    margin: 20px 0;
+    position: relative;
+}
+
+.chessboard-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .chessboard-image {
     width: 400px; /* Adjusted for desktop view */
     height: auto;
     border: 2px solid #000; /* Optional border */
+    position: relative;
 }
+.history-moments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.moment {
+    text-align: center;
+}
+
+.moment img {
+    width: 300px; /* Adjust the size of the images */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.moment h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.moment p {
+    font-size: 1rem;
+    color: #333;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #380606;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #380606;
+}
+.news-moments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.news {
+    text-align: center;
+}
+
+.news img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news p {
+    font-size: 1rem;
+    color: #333;
+}
+.stories-moments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.story {
+    text-align: center;
+}
+
+.story img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.story h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.story p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+
 
 
 /* Responsive Layout */
@@ -178,7 +273,7 @@ h1 {
         margin: 10px auto;
     }
 
-    .chess-piece-links {
+    .extra-links {
         flex-direction: column;
     }
 }
