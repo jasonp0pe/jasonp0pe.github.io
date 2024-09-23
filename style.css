@@ -37,20 +37,23 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap; /* Added to wrap cards on smaller screens */
 }
 
 .assignment-card, .project-card {
     background-color: #83d87b;
     padding: 20px;
     border: 1px solid #000000;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 calc(25% - 20px); /* Decrease card width to fit 4 cards per row */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px; /* Add margin to separate rows */
 }
 
 .assignment-card img, .project-card img, .project-card iframe {
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
     margin-bottom: 15px;
     border: 1px solid #83d87b;
 }
@@ -72,6 +75,12 @@ a {
 }
 
 /* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .assignment-card, .project-card {
+        flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+    }
+}
+
 @media (max-width: 768px) {
     .assignments-container, .projects-container {
         flex-direction: column;

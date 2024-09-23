@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #18d018;
+}
+
+header h1 {
+    color: #771111;
+}
+
+header h2 {
+    color: #000000;
+}
+
+nav .menu {
+    list-style: none;
+    display: none;
+}
+
+nav .menu li {
+    display: inline;
+    padding: 0 10px;
+}
+
+nav .menu li::after {
+    content: '|';
+}
+
+nav .menu li:last-child::after {
+    content: '';
+}
+
+nav a:hover {
+    cursor: pointer;
+}
+
+.toggle-menu {
+    cursor: pointer;
+}
+
+.exercise {
+    margin-top: 20px;
+}
+
+#colorSlider {
+    width: 80%;
+}
+
+#imageContainer img {
+    max-width: 100%;
+    height: auto;
+}

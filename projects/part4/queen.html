@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen - Chess Pieces Unveiled</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>QUEEN</h1>
+        </header>
+
+        <!-- Queen Description Section -->
+        <section class="chess-piece-details">
+            <p>The Queen is the most powerful piece in chess. It can move any number of squares in any direction—horizontally, vertically, or diagonally.</p>
+            <div class="chessboard-section">
+                <img src="images/ChessQueen.gif" alt="Queen Movement" class="chessboard-image">
+            </div>
+        </section>
+
+        <!-- Navigation back to the overview -->
+        <footer>
+            <a href="index.html">Back to Chess Pieces Overview</a>
+        </footer>
+    </div>
+
+    <!-- Lightbox for Chess Piece Images -->
+    <script>
+        const imgs = document.querySelectorAll('.chessboard-image');
+        imgs.forEach(img => {
+            img.addEventListener('click', () => {
+                const lightbox = document.createElement('div');
+                lightbox.id = 'lightbox';
+                document.body.appendChild(lightbox);
+
+                const imgElement = document.createElement('img');
+                imgElement.src = img.src;
+                imgElement.classList.add('lightbox-img');
+                lightbox.appendChild(imgElement);
+
+                lightbox.addEventListener('click', () => {
+                    lightbox.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

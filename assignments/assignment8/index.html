@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - If Statements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Assignment 8</h1>
+        <h2>If Statements</h2>
+        <nav>
+            <span class="toggle-menu">▼</span>
+            <ul class="menu">
+                <li><a href="#">Exercise 1</a></li>
+                <li><a href="#">Exercise 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="exercise-1" class="exercise">
+        <h3>Color Slider</h3>
+        <input type="range" id="colorSlider" min="0" max="255" value="128">
+        <p id="sliderMessage">Neutral</p>
+    </section>
+
+    <section id="exercise-2" class="exercise" style="display: none;">
+        <h3>Picture Chooser</h3>
+        <button id="small">Small</button>
+        <button id="medium">Medium</button>
+        <button id="large">Large</button>
+        <div id="imageContainer"></div>
+    </section>
+
+    <footer>
+        <p>@jasonp0pe.github.io</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorSlider = document.getElementById('colorSlider');
+            const sliderMessage = document.getElementById('sliderMessage');
+            const imageContainer = document.getElementById('imageContainer');
+            const toggleMenu = document.querySelector('.toggle-menu');
+            const menu = document.querySelector('.menu');
+            let menuVisible = false;
+
+            document.querySelector('nav').addEventListener('click', (e) => {
+                if (e.target.textContent === 'Exercise 1') {
+                    document.getElementById('exercise-1').style.display = 'block';
+                    document.getElementById('exercise-2').style.display = 'none';
+                } else if (e.target.textContent === 'Exercise 2') {
+                    document.getElementById('exercise-2').style.display = 'block';
+                    document.getElementById('exercise-1').style.display = 'none';
+                }
+            });
+
+            // Toggle Menu
+            toggleMenu.addEventListener('click', () => {
+                menuVisible = !menuVisible;
+                menu.style.display = menuVisible ? 'block' : 'none';
+                toggleMenu.textContent = menuVisible ? '▲' : '▼';
+            });
+
+            // Color Slider Logic
+            colorSlider.addEventListener('input', () => {
+                const redValue = colorSlider.value;
+                document.getElementById('exercise-1').style.backgroundColor = `rgb(${redValue}, 0, 0)`;
+
+                if (redValue < 85) {
+                    sliderMessage.textContent = 'Chill';
+                } else if (redValue < 170) {
+                    sliderMessage.textContent = 'Neutral';
+                } else {
+                    sliderMessage.textContent = 'Intense';
+                }
+            });
+
+            // Picture Chooser Logic
+            document.querySelectorAll('#exercise-2 button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const size = button.textContent.toLowerCase();
+                    let imageSize;
+                    if (size === 'small') {
+                        imageSize = 100;
+                    } else if (size === 'medium') {
+                        imageSize = 200;
+                    } else {
+                        imageSize = 300;
+                    }
+                    imageContainer.innerHTML = `<img src="https://picsum.photos/${imageSize}" alt="Random Picture">`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
