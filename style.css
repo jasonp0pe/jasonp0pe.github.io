@@ -7,22 +7,22 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #304401; 
+    background-color: #2A363B; 
     padding: 20px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 1;
-    color: #83d87b;
+    font-size: 2em;
+    color: #E84A5F;
 }
 
 .assignments-section, .projects-section {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -30,7 +30,7 @@ h1 {
 h2 {
     font-size: 1;
     margin-bottom: 20px;
-    color: #83d87b;
+    color: #FECEAB;
 }
 
 .assignments-container, .projects-container {
@@ -41,7 +41,7 @@ h2 {
 }
 
 .assignment-card, .project-card {
-    background-color: #83d87b;
+    background-color: #E84A5F;
     padding: 20px;
     border: 1px solid #000000;
     flex: 1 1 calc(25% - 20px); /* Decrease card width to fit 4 cards per row */
@@ -55,18 +55,18 @@ h2 {
     max-width: 300px; 
     height: auto;
     margin-bottom: 15px;
-    border: 1px solid #83d87b;
+    border: 1px solid #FECEAB;
 }
 
 .assignment-card h3, .project-card h3 {
     margin-bottom: 15px;
     font-size: 1.4em;
-    color: #000000;
+    color: #FECEAB;
 }
 
 .assignment-card p, .project-card p {
     font-size: 1em;
-    color: #000000;
+    color: #FECEAB;
 }
 
 a {

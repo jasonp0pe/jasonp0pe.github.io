@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 - For Loops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 9</h1>
+        <h2>For Loops</h2>
+        <div class="drawing-area">
+            <label for="stars-input">Stars</label>
+            <input type="number" id="stars-input" min="1">
+            <button id="draw-button">Draw</button>
+            <span id="error-message" class="error-message"></span>
+            <div class="canvas" id="canvas"></div>
+        </div>
+    </div>
+    <p>@jasonp0pe.github.io</p>
+
+    <script>
+        // Arrow function to handle drawing stars
+        const drawStars = () => {
+            const starCount = parseInt(starsInput.value);
+            canvas.innerHTML = ''; // Clear the canvas
+            errorMessage.textContent = ''; // Clear error message
+
+            if (starCount <= 0 || isNaN(starCount)) {
+                errorMessage.textContent = '* Invalid Input';
+                return;
+            }
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 90}%`;
+                star.style.top = `${Math.random() * 90}%`;
+                star.dataset.index = i + 1;
+
+                star.addEventListener('click', () => {
+                    alert(`Star number: ${star.dataset.index}`);
+                });
+
+                canvas.appendChild(star);
+            }
+        };
+
+        // Selecting elements
+        const drawButton = document.getElementById('draw-button');
+        const starsInput = document.getElementById('stars-input');
+        const canvas = document.getElementById('canvas');
+        const errorMessage = document.getElementById('error-message');
+
+        // Adding click event listener using arrow function
+        drawButton.addEventListener('click', drawStars);
+    </script>
+</body>
+</html>
+

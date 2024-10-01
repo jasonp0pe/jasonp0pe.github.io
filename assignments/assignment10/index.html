@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10 - Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 10</h1>
+        <h2>Arrays</h2>
+        <div id="image-description" class="image-description"></div>
+        <div class="images-container" id="images-container"></div>
+        <section class="image-credit">
+            Image by <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20832062.htm#query=stick%20figure%20run&position=46&from_view=search&track=ais&uuid=22e87991-ee06-4dc2-8ea3-464d535e1a63">Freepik</a>
+        </section>
+    </div>
+    <p>@jasonp0pe.github.io</p>
+
+    <script>
+        const imagesArray = [
+            { src: 'images/birthday.jpg', title: 'Birthday Celebration', description: 'A happy stickman celebrating a birthday with a party hat.' },
+            { src: 'images/clown.jpg', title: 'Clown Costume', description: 'A stickman dressed as a clown, perfect for entertaining.' },
+            { src: 'images/rain.jpg', title: 'Rainy Day', description: 'A stickman holding an umbrella, enjoying a rainy day.' },
+            { src: 'images/read.jpg', title: 'Reading Time', description: 'A stickman reading a book, enhancing their knowledge.' },
+            { src: 'images/shovel.jpg', title: 'Gardening', description: 'A stickman with a shovel, ready for some gardening.' },
+            { src: 'images/work.jpg', title: 'Working on a Laptop', description: 'A stickman working on a laptop, being productive.' }
+        ];
+
+        // Function to load images on the page
+        const imagesContainer = document.getElementById('images-container');
+        const imageDescription = document.getElementById('image-description');
+
+        imagesArray.forEach((image, index) => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image.src;
+            imgElement.alt = image.title;
+            imgElement.classList.add('stickman-image');
+
+            // Add click event to display title and description
+            imgElement.addEventListener('click', () => {
+                imageDescription.innerHTML = `<h3>${image.title}</h3><p>${image.description}</p>`;
+            });
+
+            imagesContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
