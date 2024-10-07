@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Light beige */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #213f4e; /* Slate */
+}
+
+header h2 {
+    color: #552b1f; /* Coral */
+}
+
+#bird-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Adds spacing between cards */
+    margin-top: 20px;
+}
+
+.bird-card {
+    background-color: #aad4e5; /* Light blue */
+    padding: 15px;
+    width: calc(25% - 20px); /* Ensures four cards fit in one row with a gap */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.bird-card:hover {
+    transform: scale(1.05);
+}
+
+.bird-card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for all images to align properly */
+    object-fit: cover; /* Crop the image to fit the specified height */
+}
+
+.bird-card-title {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center; /* Ensures the title is centered */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5dc; /* Same background color as body */
+    color: #5f7c8a; /* Slate color */
+    font-size: 1em;
+    text-align: center;
+    border-top: 1px solid #dcdcdc; /* Light border for separation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bird-card {
+        width: 100%; /* Full width for each card on smaller screens */
+    }
+}

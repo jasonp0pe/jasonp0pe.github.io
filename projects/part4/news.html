@@ -8,6 +8,29 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Chess Pieces Unveiled</a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu">
+                    &#9776;
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="king.html">King</a></li>
+                    <li><a href="queen.html">Queen</a></li>
+                    <li><a href="rook.html">Rook</a></li>
+                    <li><a href="bishop.html">Bishop</a></li>
+                    <li><a href="knight.html">Knight</a></li>
+                    <li><a href="pawn.html">Pawn</a></li>
+                    <li><a href="AllPieces.html">View All Pieces</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Header -->
         <header>
             <h1>Chess News</h1>
@@ -39,5 +62,17 @@
             <a href="index.html">Back to Chess Pieces Overview</a>
         </footer>
     </div>
+
+    <!-- Inline JavaScript for Toggle Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

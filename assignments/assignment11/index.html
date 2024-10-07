@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Assignment 11 - Birds</title>
+</head>
+<body>
+    <header>
+        <h1>Assignment 11</h1>
+        <h2>Classes</h2>
+    </header>
+    <main id="bird-container" class="w3-row-padding">
+        <!-- JavaScript will populate bird sections here -->
+    </main>
+
+    <!-- Modal Template -->
+    <div id="modal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal">
+                <span onclick="document.getElementById('modal').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h2 id="modal-title"></h2>
+            </header>
+            <div class="w3-container" id="modal-content">
+                <!-- Bird details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Images by Freepik</p>
+        <p>jasonp0pe.github.io</p>
+    </footer>
+
+</body>
+</html>

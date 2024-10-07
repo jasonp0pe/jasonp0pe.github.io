@@ -8,6 +8,29 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Chess Pieces Unveiled</a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu">
+                    &#9776;
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="king.html">King</a></li>
+                    <li><a href="queen.html">Queen</a></li>
+                    <li><a href="rook.html">Rook</a></li>
+                    <li><a href="bishop.html">Bishop</a></li>
+                    <li><a href="knight.html">Knight</a></li>
+                    <li><a href="pawn.html">Pawn</a></li>
+                    <li><a href="AllPieces.html">View All Pieces</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Header -->
         <header>
             <h1>All Chess Pieces Moving Together</h1>
@@ -63,22 +86,31 @@
             <a href="index.html">Back to Chess Pieces Overview</a>
         </footer>
 
-        <!-- Lightbox for Chess Piece Images -->
+        <!-- Inline JavaScript for Toggle Navigation and Lightbox -->
         <script>
-            const imgs = document.querySelectorAll('.piece img');
-            imgs.forEach(img => {
-                img.addEventListener('click', () => {
-                    const lightbox = document.createElement('div');
-                    lightbox.id = 'lightbox';
-                    document.body.appendChild(lightbox);
+            document.addEventListener('DOMContentLoaded', function () {
+                const navToggle = document.querySelector('.nav-toggle');
+                const navMenu = document.querySelector('.nav-menu');
 
-                    const imgElement = document.createElement('img');
-                    imgElement.src = img.src;
-                    imgElement.classList.add('lightbox-img');
-                    lightbox.appendChild(imgElement);
+                navToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                });
 
-                    lightbox.addEventListener('click', () => {
-                        lightbox.remove();
+                const imgs = document.querySelectorAll('.piece img');
+                imgs.forEach(img => {
+                    img.addEventListener('click', () => {
+                        const lightbox = document.createElement('div');
+                        lightbox.id = 'lightbox';
+                        document.body.appendChild(lightbox);
+
+                        const imgElement = document.createElement('img');
+                        imgElement.src = img.src;
+                        imgElement.classList.add('lightbox-img');
+                        lightbox.appendChild(imgElement);
+
+                        lightbox.addEventListener('click', () => {
+                            lightbox.remove();
+                        });
                     });
                 });
             });
@@ -86,4 +118,3 @@
     </div>
 </body>
 </html>
-
