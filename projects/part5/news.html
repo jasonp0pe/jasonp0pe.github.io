@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Chess Pieces Unveiled</a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu">
+                    &#9776;
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="king.html">King</a></li>
+                    <li><a href="queen.html">Queen</a></li>
+                    <li><a href="rook.html">Rook</a></li>
+                    <li><a href="bishop.html">Bishop</a></li>
+                    <li><a href="knight.html">Knight</a></li>
+                    <li><a href="pawn.html">Pawn</a></li>
+                    <li><a href="AllPieces.html">View All Pieces</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header>
+            <h1>Chess News</h1>
+        </header>
+
+        <!-- Latest Chess News -->
+        <section class="news-moments">
+            <div class="news">
+                <img src="images/2024world.jpg" alt="World Chess Championship">
+                <h3>2024: World Chess Championship</h3>
+                <p>The 2024 World Chess Championship saw the battle between two top players, continuing the age-old tradition of determining the chess world champion. Exciting new strategies were seen this year.</p>
+            </div>
+
+            <div class="news">
+                <img src="images/onlinechess.png" alt="Online Chess Tournaments">
+                <h3>2023: Rise of Online Chess Tournaments</h3>
+                <p>Online chess has exploded in popularity due to the COVID-19 pandemic, with major platforms like Chess.com and Lichess hosting record-breaking tournaments, attracting millions of players globally.</p>
+            </div>
+
+            <div class="news">
+                <img src="images/magnuz.jpg" alt="Magnus Carlsen">
+                <h3>2022: Magnus Carlsen's Retirement from Classical Chess</h3>
+                <p>Five-time World Champion Magnus Carlsen announced that he would not defend his World Chess Championship title, marking the end of an era in classical chess domination.</p>
+            </div>
+        </section>
+
+        <!-- Back to Chess Pieces Overview -->
+        <footer>
+            <a href="index.html">Back to Chess Pieces Overview</a>
+        </footer>
+    </div>
+
+    <!-- Inline JavaScript for Toggle Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

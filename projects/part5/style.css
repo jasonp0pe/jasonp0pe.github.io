@@ -1,0 +1,420 @@
+:root {
+    --primary-bg: #440b0b;
+    --secondary-bg: #7a775a;
+    --text-color: #333;
+    --highlight-color: #1a1a1a; /* Black chess pieces */
+    --gold-color: #DAA520; /* Gold accents */
+    --link-color: #555555;
+    --link-hover-color: #DAA520; /* Gold hover */
+    --border-color: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-image: linear-gradient(90deg, var(--highlight-color), var(--gold-color));
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.overview img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.pieces-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.pieces-list a {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.pieces-list a:hover {
+    background-color: var(--gold-color);
+}
+
+.chess-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight-color);
+}
+
+.card h3 {
+    margin: 20px 0;
+    color: var(--highlight-color);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: var(--gold-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--highlight-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+footer a {
+    color: var(--gold-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.additional-pages {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--highlight-color);
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.additional-pages h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.extra-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.extra-link {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: var(--gold-color);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.extra-link:hover {
+    background-color: var(--link-hover-color);
+}
+
+.all-pieces {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.piece {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.piece:hover {
+    transform: translateY(-10px);
+}
+
+.piece img {
+    width: 150px;
+    height: auto;
+}
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.stories-moments img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;    
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+.stories-moments .moment {
+    text-align: center;
+}
+.news-moments img {
+    width: 100%;
+    max-width: 300px;  
+    height: auto;     
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+.news-moments .news {
+    text-align: center;
+}
+.history-moments img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;    
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+.history-moments .moment {
+    text-align: center;
+}
+.chessboard-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.chessboard-image {
+    max-width: 60%; 
+    height: auto;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+.chessboard-image {
+    max-width: 40%; 
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+}
+.chess-piece-details p, .history-moments p, .news-moments p, .stories-moments {
+    font-weight: 600; 
+    font-size: 1.2rem; 
+    line-height: 1.6;
+    color: #333; 
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .pieces-list {
+        flex-direction: column;
+    }
+
+    .chess-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .extra-links {
+        flex-direction: column;
+    }
+}
+/* Navigation Bar Styles */
+.navbar {
+    background-color: var(--highlight-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    padding: 10px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--gold-color);
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--highlight-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        padding: 15px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}

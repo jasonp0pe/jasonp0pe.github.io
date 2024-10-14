@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ice Cream Shop</h1>
+    <div class="ice-cream-container" id="iceCreamContainer"></div>
+    <footer>
+        <p>All images provided by freepik.com</p>
+        <p>@jasonp0pe.github.io</p>
+    </footer>
+
+    <script>
+        async function fetchIceCreamData() {
+            try {
+                const response = await fetch('https://portiaportia.github.io/json/ice-creams.json');
+                const data = await response.json();
+                displayIceCreams(data);
+            } catch (error) {
+                console.error('Error fetching the ice cream data:', error);
+            }
+        }
+
+        function displayIceCreams(iceCreams) {
+            const container = document.getElementById('iceCreamContainer');
+            iceCreams.forEach(iceCream => {
+                const iceCreamDiv = document.createElement('div');
+                iceCreamDiv.classList.add('ice-cream-item');
+                const overlayStyle = `background-color: ${iceCream.colors[1]};`;
+
+                iceCreamDiv.innerHTML = `
+                    <img src="https://portiaportia.github.io/json/images/ice-creams/${iceCream.image}" alt="${iceCream.name}">
+                    <div class="overlay" style="${overlayStyle}">${iceCream.name}</div>
+                    <p class="description">${iceCream.description}</p>
+                `;
+
+                container.appendChild(iceCreamDiv);
+            });
+        }
+
+        fetchIceCreamData();
+    </script>
+</body>
+</html>

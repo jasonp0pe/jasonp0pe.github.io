@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8B195;
+    text-align: center;
+}
+
+h1 {
+    color: #355C7D;
+    margin: 20px 0;
+    font-size: 36px;
+}
+
+.ice-cream-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ice-cream-item {
+    position: relative;
+    width: 300px; 
+    height: 180px;
+    border-radius: 0; 
+    overflow: hidden;
+}
+
+.ice-cream-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #355C7D;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ice-cream-item:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Hide the descriptions */
+.description {
+    display: none;
+}
+@media (max-width: 768px) {
+    .ice-cream-container {
+        grid-template-columns: repeat(2, 1fr); /* Two images in a row for mobile */
+        gap: 15px;
+    }
+
+    .ice-cream-item {
+        width: 250px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 28px; /* Slightly smaller font size for mobile */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

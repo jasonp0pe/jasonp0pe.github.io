@@ -1,0 +1,66 @@
+[
+    {
+        "_id": 1,
+        "name": "King",
+        "img_name": "images/ChessKing.gif",
+        "movement": ["One square", "Any direction", "Horizontally or vertically"],
+        "description": "The King can move one square in any direction.",
+        "power": "Most important piece"
+    },
+    {
+        "_id": 2,
+        "name": "Queen",
+        "img_name": "images/ChessQueen.gif",
+        "movement": ["Unlimited squares", "Any direction"],
+        "description": "The Queen can move in any direction across the board.",
+        "power": "Most powerful piece"
+    },
+    {
+        "_id": 3,
+        "name": "Bishop",
+        "img_name": "images/ChessBishop.gif",
+        "movement": ["Unlimited squares", "Diagonally"],
+        "description": "The Bishop moves diagonally through any number of unoccupied squares.",
+        "power": "Good for controlling diagonals"
+    },
+    {
+        "_id": 4,
+        "name": "Knight",
+        "img_name": "images/ChessKnight.gif",
+        "movement": ["L-shape", "Jump over pieces"],
+        "description": "The Knight moves in an 'L' shape and can jump over other pieces.",
+        "power": "Can bypass other pieces"
+    },
+    {
+        "_id": 5,
+        "name": "Rook",
+        "img_name": "images/ChessRook.gif",
+        "movement": ["Unlimited squares", "Horizontally or vertically"],
+        "description": "The Rook moves horizontally or vertically through any number of squares.",
+        "power": "Controls rows and columns"
+    },
+    {
+        "_id": 6,
+        "name": "Pawn",
+        "img_name": "images/ChessPawn.gif",
+        "movement": ["One square", "Forward"],
+        "description": "The Pawn moves forward one square at a time.",
+        "power": "Promotion potential"
+    },
+    {
+        "_id": 7,
+        "name": "History of Chess",
+        "img_name": "images/chatu.jpg", 
+        "movement": ["India origin", "Spread to Persia", "Evolution over centuries"],
+        "description": "Chess began as Chaturanga in India and evolved over the centuries.",
+        "power": "Cultural evolution"
+    },
+    {
+        "_id": 8,
+        "name": "Chess News",
+        "img_name": "images/2024world.jpg",  
+        "movement": ["World Chess Championship", "Online Chess Tournaments", "Carlsen Retires"],
+        "description": "The latest news from the chess world, including tournaments and famous players.",
+        "power": "Influence on modern chess"
+    }
+]
