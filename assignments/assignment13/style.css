@@ -1,0 +1,28 @@
+body {
+    font-family: Impact, 'Arial Narrow Bold', sans-serif, sans-serif;
+    text-align: center;
+    background-color: #2333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.image-container img {
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.links-container a {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #107f19;
+    text-decoration: none;
+}
+
+.links-container a:hover {
+    text-decoration: underline;
+}
