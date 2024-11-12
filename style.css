@@ -74,6 +74,8 @@ a {
     color: inherit; 
 }
 
+  
+
 /* Responsive design for smaller screens */
 @media (max-width: 1200px) {
     .assignment-card, .project-card {
